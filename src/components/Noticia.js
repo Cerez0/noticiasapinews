@@ -11,7 +11,7 @@ const Noticia = ({noticia}) => {
 
     const imagen = (urlToImage) ? 
         <div>
-            <img className="card-img-top" src={urlToImage} alt={title}/>
+            <img className="card-img-top img-tarjeta img-fluid" src={urlToImage} alt={title}/>
             <span className="card-title">{source.name}</span>
         </div>
     
@@ -20,7 +20,7 @@ const Noticia = ({noticia}) => {
     return(
         
         <div className="card col-12 col-md-3 text-center tarjeta-noticia ">
-            <div className="card-body d-flex flex-column align-items-center flex-column">
+            <div className="card-body d-flex flex-column align-items-center">
                 {imagen}
             
             

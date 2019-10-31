@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 
 const ListaNoticias = ({noticias}) => (
-    
-        <div className="row d-flex justify-content-center">
+        <div className="container">
+        <div className="row d-flex justify-content-center ">
             {noticias.map(noticia => (
                 <Noticia
                     key = {noticia.url}
@@ -13,6 +13,7 @@ const ListaNoticias = ({noticias}) => (
                 />
                 
             ))}
+        </div>
         </div>
 );
 
