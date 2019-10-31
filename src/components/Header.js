@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
 const Header = ({titulo}) => (
 
-    <nav className="nav-wrapper light-blue darken-3">
+    <div className="container-fluid bg-primary contenedor-titulo">
+        <nav className="text-center">
 
-        <a href="http://localhost:3000" className="brand-logo center"> <center>{titulo}</center></a>
+            <a href="http://localhost:3000" className="titulo"><h1>{titulo}</h1></a>
 
-    </nav>
+        </nav>
+    </div>
 
 );
 

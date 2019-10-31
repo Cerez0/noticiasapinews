@@ -30,19 +30,20 @@ class App extends Component {
     return ( 
       <Fragment>
         <Header 
-          titulo = 'Noticias'
+          titulo = 'Noticias API News'
         />
-        <div className="center">
-          <Formulario 
-            consultarNoticias={this.consultarNoticias}
-          />
+        <div className="container">
+          <div className="row">
+            <Formulario 
+              consultarNoticias={this.consultarNoticias}
+            />
+          </div>
         </div>
 
-        <div className="container white contenedor-noticias">
-            <ListaNoticias
-              noticias = {this.state.noticias}
-            />
-
+        <div className="container">
+              <ListaNoticias
+                noticias = {this.state.noticias}
+              />
             
           <div>
             <a href="https://newsapi.org/">News API</a>

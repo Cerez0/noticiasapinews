@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const ListaNoticias = ({noticias}) => (
     
-        <div className="row">
+        <div className="row d-flex justify-content-center">
             {noticias.map(noticia => (
                 <Noticia
                     key = {noticia.url}

@@ -23,23 +23,24 @@ class Formulario extends Component {
     render() {
 
         return(
-            <div className="buscador row">
-                <div className="col s12 m8 offset-m2">
+            <div className="col-12 justify-content-center">
+                <div className="contenedor-desplegable row">
                     <form>
-                        <h2>Encuentra Noticias por Categoria</h2>
-                        <div className="input-field col s12 m8 offset-m2">
+                        <h2 className="titulo2 text-primary">Encuentra Noticias por Categoria</h2>
 
-                            <select onChange={this.cambiarCategoria}>
+                        <div className="contenedor-desplegable">
+                            <select className="desplegable" onChange={this.cambiarCategoria}>
 
-                                <option value="general" className="center">General</option>
-                                <option value="business" className="center">Negocios</option>
+                                <option value="general" className="">General</option>
+                                <option value="business" className="">Negocios</option>
                                 <option value="entertainment">Entretenimiento</option>
                                 <option value="health">Salud</option>
                                 <option value="science">Ciencia</option>
                                 <option value="sports">Deportes</option>
                                 <option value="technology">Tecnologia</option>
-
+                                
                             </select>
+                            <i></i>
                         </div>
                     </form>
                 </div>

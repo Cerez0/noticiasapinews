@@ -10,27 +10,30 @@ const Noticia = ({noticia}) => {
     // condicionalmente cargar la imagen si esta disponible
 
     const imagen = (urlToImage) ? 
-        <div className="card-image">
-            <img src={urlToImage} alt={title}/>
+        <div>
+            <img className="card-img-top" src={urlToImage} alt={title}/>
             <span className="card-title">{source.name}</span>
         </div>
     
     : null;
 
     return(
-
-        <div className="col s12 m6 l4">
-        <div className="card">
-            {imagen}
-            <div className="card-content">
-                <h3>{title}</h3>
-                <p>{descrpition}</p>
-            </div>
-            <div className="card-action">
-                <a href={url} target="_blank" rel="noopener noreferrer" className="wavs-effect waves-light btn"> Ver Noticia</a>
-            </div>
-        </div>
+        
+        <div className="card col-12 col-md-3 text-center tarjeta-noticia ">
+            <div className="card-body d-flex flex-column align-items-center flex-column">
+                {imagen}
             
+            
+                <div className="card-title">
+                    <h3 className="h5 mt-1 contenedor-texto-tarjeta">{title}</h3>
+                </div>
+                <div className="">
+                    <p>{descrpition}</p>
+                </div>
+ 
+                <a href={url} target="_blank" rel="noopener noreferrer" className="boton-tarjeta btn btn-secondary"> Ver Noticia</a>
+                
+            </div>
         </div>
         
     );

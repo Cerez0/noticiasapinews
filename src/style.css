@@ -1,0 +1,91 @@
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* HEADER **/
+
+.contenedor-titulo {
+
+    padding: 1rem 0 .5rem 0;
+}
+.titulo {
+
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+.titulo:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.titulo2 {
+
+    padding: 1rem 0 1rem 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* DESPLEGABLE */
+
+.desplegable{
+    margin-bottom: 1rem;
+}
+
+
+
+
+.contenedor-desplegable {
+
+    justify-content: center;
+
+
+}
+
+.contenedor-desplegable .desplegable{
+	display: inline-block;
+	width: 100%;
+	cursor: pointer;
+  	padding: 7px 10px;
+  	height: 42px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	font-size: 1em;
+	color: #999;
+	font-family: 
+	'Quicksand', sans-serif;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.contenedor-desplegable .desplegable:hover{
+    background: #2C3E50;
+    color: white;
+}
+
+
+
+.tarjeta-noticia {
+
+    border-radius: 5%;
+    background-color: #2C3E50;
+    color: white;
+    margin: .5rem;
+    padding: 1rem;
+    max-width: 95%;
+}
+
+.contenedor-texto-tarjeta{
+
+    height: 6rem;
+}
+.boton-tarjeta {
+    width: 95%;
+
+}
