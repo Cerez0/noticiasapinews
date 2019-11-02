@@ -19,6 +19,7 @@ class App extends Component {
     const url = `https://newsapi.org/v2/top-headlines?country=${pais}&category=${categoria}&apiKey=b9722d799b54437382db68617d2d3bd7`
     const respuesta = await fetch(url);
     const noticias = await respuesta.json();
+    
 
     this.setState({
       noticias :  noticias.articles

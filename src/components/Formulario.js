@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class Formulario extends Component {
+
     state = {
         categoria : 'General',
         pais : 'mx'
@@ -12,6 +13,8 @@ class Formulario extends Component {
         this.setState({
             categoria : e.target.value,
             pais : e.target.value
+        
+        
         }, ()=> {
 
             console.log(this.state.categoria + " " +this.state.pais);
@@ -20,17 +23,6 @@ class Formulario extends Component {
             
         });
     }
-
-    
-
-    resultados = ()=> {
-
-        console.log(this.state.categoria + " " +this.state.pais);
-        // pasarlo a la pagina principal
-        this.props.consultarNoticias(this.state.categoria, this.state.pais);
-        
-    }
-
     
 
     render() {
@@ -45,7 +37,7 @@ class Formulario extends Component {
                     <h2 className="titulo2 text-primary">Encuentra Noticias</h2>
                     <form className="col-12 d-flex justify-content-center">
 
-                        <div className="contenedor-desplegable text-center col-2">
+                        <div className="contenedor-desplegable text-center col-12 col-md-6 col-lg-6">
                             <p>Categorias</p>
                             <select className="desplegable" onChange={this.cambiarCategoria}>
 
@@ -62,7 +54,7 @@ class Formulario extends Component {
 
                         {/* Idioma Paises Noticias */}
 
-                        <div className="contenedor-desplegable text-center col-2">
+                        <div className="contenedor-desplegable text-center col-12  ocultar">
                             <p>Pais</p>
                             <select className="desplegable" onChange={this.cambiarCategoria}>
 

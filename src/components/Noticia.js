@@ -19,7 +19,7 @@ const Noticia = ({noticia}) => {
 
     return(
         
-        <div className="card col-12 col-md-3 text-center tarjeta-noticia ">
+        <div className="card col-12 col-md-5 col-lg-3 text-center tarjeta-noticia ">
             <div className="card-body d-flex flex-column align-items-center">
                 {imagen}
             

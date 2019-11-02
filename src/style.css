@@ -67,6 +67,10 @@
     color: white;
 }
 
+.ocultar {
+
+    display: none;
+}
 
 
 .tarjeta-noticia {
