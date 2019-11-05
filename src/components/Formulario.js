@@ -11,18 +11,30 @@ class Formulario extends Component {
     cambiarCategoria = e => {
 
         this.setState({
-            categoria : e.target.value,
-            pais : e.target.value
-        
-        
+            categoria : e.target.value
+         
         }, ()=> {
 
-            console.log(this.state.categoria + " " +this.state.pais);
             // pasarlo a la pagina principal
-            this.props.consultarNoticias(this.state.categoria);
+            this.props.consultarCategorias(this.state.categoria, this.state.pais);
             
         });
     }
+
+    cambiarPais = e => {
+
+        this.setState({
+            pais : e.target.value
+         
+        }, ()=> {
+
+            // pasarlo a la pagina principal
+            this.props.consultarPais(this.state.pais, this.state.categoria);
+            
+        });
+    }
+
+    
     
 
     render() {
@@ -32,12 +44,12 @@ class Formulario extends Component {
 
 
                 {/* Categorias Noticias */}
-                <div className="contenedor-desplegable row">
+                <div className="text-center">
                     
                     <h2 className="titulo2 text-primary">Encuentra Noticias</h2>
-                    <form className="col-12 d-flex justify-content-center">
+                    <form className="col-12 text-center row m-0">
 
-                        <div className="contenedor-desplegable text-center col-12 col-md-6 col-lg-6">
+                        <div className="col-12 col-md-6">
                             <p>Categorias</p>
                             <select className="desplegable" onChange={this.cambiarCategoria}>
 
@@ -54,9 +66,9 @@ class Formulario extends Component {
 
                         {/* Idioma Paises Noticias */}
 
-                        <div className="contenedor-desplegable text-center col-12  ocultar">
+                        <div className="text-center col-12 col-md-6">
                             <p>Pais</p>
-                            <select className="desplegable" onChange={this.cambiarCategoria}>
+                            <select className="desplegable" onChange={this.cambiarPais}>
 
                                 <option value="mx">Mexico</option>
                                 <option value="ae">Emiratos Árabes Unidos</option>
@@ -88,7 +100,8 @@ class Formulario extends Component {
 
 Formulario.propTypes = {
 
-    consultarNoticias : PropTypes.func.isRequired
+    consultarCategorias : PropTypes.func.isRequired,
+    consultarPais : PropTypes.func.isRequired
 
 }
 export default Formulario;

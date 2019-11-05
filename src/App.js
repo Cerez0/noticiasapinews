@@ -10,13 +10,25 @@ class App extends Component {
   }
 
   async componentDidMount(){
-    this.consultarNoticias()
+    //Al inicio hacer consulta usando la funcion consultaCategorias
+    this.consultarCategorias()
   }
 
-  consultarNoticias = async (categoria ='general', pais ='mx') => {
-    console.log(` en la pagina App ${pais}`);
-    console.log(` en la pagina App ${categoria}`);
-    const url = `https://newsapi.org/v2/top-headlines?country=${pais}&category=${categoria}&apiKey=b9722d799b54437382db68617d2d3bd7`
+  consultarCategorias = async (categoria ='general', pais = 'mx') => {
+    var url = `https://newsapi.org/v2/top-headlines?country=${pais}&category=${categoria}&apiKey=b9722d799b54437382db68617d2d3bd7`
+    const respuesta = await fetch(url);
+    const noticias = await respuesta.json();
+    
+
+    this.setState({
+      noticias :  noticias.articles
+      
+    })
+
+  }
+
+  consultarPais = async (pais ='mx', categoria ='general') => {
+    var url = `https://newsapi.org/v2/top-headlines?country=${pais}&category=${categoria}&apiKey=b9722d799b54437382db68617d2d3bd7`
     const respuesta = await fetch(url);
     const noticias = await respuesta.json();
     
@@ -29,6 +41,8 @@ class App extends Component {
 
 
   render() {
+
+    
     return ( 
       <Fragment>
         <Header 
@@ -37,7 +51,8 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <Formulario 
-              consultarNoticias={this.consultarNoticias}
+              consultarCategorias={this.consultarCategorias}
+              consultarPais={this.consultarPais}
             />
           </div>
         </div>

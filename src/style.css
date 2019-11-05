@@ -32,16 +32,7 @@
 }
 
 
-
-
-.contenedor-desplegable {
-
-    justify-content: center;
-
-
-}
-
-.contenedor-desplegable .desplegable{
+ .desplegable{
 	display: inline-block;
 	width: 100%;
 	cursor: pointer;
@@ -62,7 +53,7 @@
     transition: all 0.25s ease;
 }
 
-.contenedor-desplegable .desplegable:hover{
+.desplegable:hover{
     background: #2C3E50;
     color: white;
 }
